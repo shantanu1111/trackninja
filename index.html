@@ -1,0 +1,669 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TrackNinja - Delivering Bespoke Software Solutions</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+        body { font-family: 'Inter', sans-serif; }
+    </style>
+</head>
+<body class="bg-white">
+    <!-- Navigation -->
+    <nav class="bg-white border-b border-gray-200 sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center">
+                    <span class="text-2xl font-bold text-blue-600">TRACKNINJA</span>
+                </div>
+                
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex space-x-8 items-center">
+                    <div class="relative group">
+                        <button class="text-gray-700 hover:text-blue-600 flex items-center py-2">
+                            Services
+                            <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                            </svg>
+                        </button>
+                        <!-- Services Mega Dropdown -->
+                        <div class="absolute left-0 mt-2 w-screen max-w-6xl bg-white rounded-lg shadow-2xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50 -ml-48">
+                            <div class="p-8">
+                                <div class="grid grid-cols-4 gap-8">
+                                    <!-- Web Development -->
+                                    <div>
+                                        <div class="flex items-center mb-4">
+                                            <div class="w-10 h-10 bg-blue-100 rounded-lg flex items-center justify-center mr-3">
+                                                <svg class="w-5 h-5 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9"/>
+                                                </svg>
+                                            </div>
+                                            <h3 class="font-bold text-gray-900">Web Development</h3>
+                                        </div>
+                                        <ul class="space-y-2">
+                                            <li><a href="#" class="text-sm text-gray-600 hover:text-blue-600 flex items-center"><span class="mr-2">✓</span>Web Application Development</a></li>
+                                            <li><a href="#" class="text-sm text-gray-600 hover:text-blue-600 flex items-center"><span class="mr-2">✓</span>Enterprise Website Development</a></li>
+                                            <li><a href="#" class="text-sm text-gray-600 hover:text-blue-600 flex items-center"><span class="mr-2">✓</span>WordPress Development</a></li>
+                                            <li><a href="#" class="text-sm text-gray-600 hover:text-blue-600 flex items-center"><span class="mr-2">✓</span>Jamstack Development</a></li>
+                                            <li><a href="#" class="text-sm text-gray-600 hover:text-blue-600 flex items-center"><span class="mr-2">✓</span>Website Support & Maintenance</a></li>
+                                        </ul>
+                                    </div>
+
+                                    <!-- UI/UX Design -->
+                                    <div>
+                                        <div class="flex items-center mb-4">
+                                            <div class="w-10 h-10 bg-blue-100 rounded-lg flex items-center justify-center mr-3">
+                                                <svg class="w-5 h-5 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01"/>
+                                                </svg>
+                                            </div>
+                                            <h3 class="font-bold text-gray-900">UI/UX Design</h3>
+                                        </div>
+                                        <ul class="space-y-2">
+                                            <li><a href="#" class="text-sm text-gray-600 hover:text-blue-600 flex items-center"><span class="mr-2">✓</span>Application UX Design</a></li>
+                                            <li><a href="#" class="text-sm text-gray-600 hover:text-blue-600 flex items-center"><span class="mr-2">✓</span>Website UI/UX Design</a></li>
+                                            <li><a href="#" class="text-sm text-gray-600 hover:text-blue-600 flex items-center"><span class="mr-2">✓</span>Web Portal UI/UX Design</a></li>
+                                            <li><a href="#" class="text-sm text-gray-600 hover:text-blue-600 flex items-center"><span class="mr-2">✓</span>Mobile App UX Design</a></li>
+                                            <li><a href="#" class="text-sm text-gray-600 hover:text-blue-600 flex items-center"><span class="mr-2">✓</span>SaaS Product UX Design</a></li>
+                                        </ul>
+                                    </div>
+
+                                    <!-- Software Development -->
+                                    <div>
+                                        <div class="flex items-center mb-4">
+                                            <div class="w-10 h-10 bg-blue-100 rounded-lg flex items-center justify-center mr-3">
+                                                <svg class="w-5 h-5 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"/>
+                                                </svg>
+                                            </div>
+                                            <h3 class="font-bold text-gray-900">Software Development</h3>
+                                        </div>
+                                        <ul class="space-y-2">
+                                            <li><a href="#" class="text-sm text-gray-600 hover:text-blue-600 flex items-center"><span class="mr-2">✓</span>Custom Software Development</a></li>
+                                            <li><a href="#" class="text-sm text-gray-600 hover:text-blue-600 flex items-center"><span class="mr-2">✓</span>Development Team Augmentation</a></li>
+                                            <li><a href="#" class="text-sm text-gray-600 hover:text-blue-600 flex items-center"><span class="mr-2">✓</span>Software Support & Maintenance</a></li>
+                                            <li><a href="#" class="text-sm text-gray-600 hover:text-blue-600 flex items-center"><span class="mr-2">✓</span>Digital Transformation</a></li>
+                                            <li><a href="#" class="text-sm text-gray-600 hover:text-blue-600 flex items-center"><span class="mr-2">✓</span>Legacy System Modernization</a></li>
+                                        </ul>
+                                    </div>
+
+                                    <!-- Mobile App Development -->
+                                    <div>
+                                        <div class="flex items-center mb-4">
+                                            <div class="w-10 h-10 bg-blue-100 rounded-lg flex items-center justify-center mr-3">
+                                                <svg class="w-5 h-5 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z"/>
+                                                </svg>
+                                            </div>
+                                            <h3 class="font-bold text-gray-900">Mobile App Development</h3>
+                                        </div>
+                                        <ul class="space-y-2">
+                                            <li><a href="#" class="text-sm text-gray-600 hover:text-blue-600 flex items-center"><span class="mr-2">✓</span>Native iOS App Development</a></li>
+                                            <li><a href="#" class="text-sm text-gray-600 hover:text-blue-600 flex items-center"><span class="mr-2">✓</span>Android App Development</a></li>
+                                            <li><a href="#" class="text-sm text-gray-600 hover:text-blue-600 flex items-center"><span class="mr-2">✓</span>Cross Platform App Development</a></li>
+                                            <li><a href="#" class="text-sm text-gray-600 hover:text-blue-600 flex items-center"><span class="mr-2">✓</span>PWA Development</a></li>
+                                            <li><a href="#" class="text-sm text-gray-600 hover:text-blue-600 flex items-center"><span class="mr-2">✓</span>Hybrid App Development</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <!-- Second Row -->
+                                <div class="grid grid-cols-3 gap-8 mt-8 pt-8 border-t border-gray-200">
+                                    <!-- Strategy & Consulting -->
+                                    <div>
+                                        <div class="flex items-center mb-4">
+                                            <div class="w-10 h-10 bg-blue-100 rounded-lg flex items-center justify-center mr-3">
+                                                <svg class="w-5 h-5 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/>
+                                                </svg>
+                                            </div>
+                                            <h3 class="font-bold text-gray-900">Strategy & Consulting</h3>
+                                        </div>
+                                        <ul class="space-y-2">
+                                            <li><a href="#" class="text-sm text-gray-600 hover:text-blue-600 flex items-center"><span class="mr-2">✓</span>DevOps Consulting</a></li>
+                                            <li><a href="#" class="text-sm text-gray-600 hover:text-blue-600 flex items-center"><span class="mr-2">✓</span>Data Analytics</a></li>
+                                            <li><a href="#" class="text-sm text-gray-600 hover:text-blue-600 flex items-center"><span class="mr-2">✓</span>Website Audit & Consulting</a></li>
+                                            <li><a href="#" class="text-sm text-gray-600 hover:text-blue-600 flex items-center"><span class="mr-2">✓</span>UX Analysis & Strategy</a></li>
+                                            <li><a href="#" class="text-sm text-gray-600 hover:text-blue-600 flex items-center"><span class="mr-2">✓</span>Cybersecurity</a></li>
+                                        </ul>
+                                    </div>
+
+                                    <!-- Growth Marketing -->
+                                    <div>
+                                        <div class="flex items-center mb-4">
+                                            <div class="w-10 h-10 bg-blue-100 rounded-lg flex items-center justify-center mr-3">
+                                                <svg class="w-5 h-5 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 8v8m-4-5v5m-4-2v2m-2 4h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"/>
+                                                </svg>
+                                            </div>
+                                            <h3 class="font-bold text-gray-900">Growth Marketing</h3>
+                                        </div>
+                                        <ul class="space-y-2">
+                                            <li><a href="#" class="text-sm text-gray-600 hover:text-blue-600 flex items-center"><span class="mr-2">✓</span>Search Engine Optimization (SEO)</a></li>
+                                            <li><a href="#" class="text-sm text-gray-600 hover:text-blue-600 flex items-center"><span class="mr-2">✓</span>Content Marketing</a></li>
+                                            <li><a href="#" class="text-sm text-gray-600 hover:text-blue-600 flex items-center"><span class="mr-2">✓</span>Pay-per-click (PPC) Advertising</a></li>
+                                            <li><a href="#" class="text-sm text-gray-600 hover:text-blue-600 flex items-center"><span class="mr-2">✓</span>Social Media Marketing</a></li>
+                                            <li><a href="#" class="text-sm text-gray-600 hover:text-blue-600 flex items-center"><span class="mr-2">✓</span>Email Marketing</a></li>
+                                        </ul>
+                                    </div>
+
+                                    <!-- Quality Assurance & Testing -->
+                                    <div>
+                                        <div class="flex items-center mb-4">
+                                            <div class="w-10 h-10 bg-blue-100 rounded-lg flex items-center justify-center mr-3">
+                                                <svg class="w-5 h-5 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                                                </svg>
+                                            </div>
+                                            <h3 class="font-bold text-gray-900">Quality Assurance & Testing</h3>
+                                        </div>
+                                        <ul class="space-y-2">
+                                            <li><a href="#" class="text-sm text-gray-600 hover:text-blue-600 flex items-center"><span class="mr-2">✓</span>Manual Software Testing</a></li>
+                                            <li><a href="#" class="text-sm text-gray-600 hover:text-blue-600 flex items-center"><span class="mr-2">✓</span>Automated Testing</a></li>
+                                            <li><a href="#" class="text-sm text-gray-600 hover:text-blue-600 flex items-center"><span class="mr-2">✓</span>Performance Testing</a></li>
+                                            <li><a href="#" class="text-sm text-gray-600 hover:text-blue-600 flex items-center"><span class="mr-2">✓</span>Hire Software Testers</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <!-- Bottom Links -->
+                                <div class="mt-8 pt-6 border-t border-gray-200 flex justify-between items-center">
+                                    <a href="#" class="text-blue-600 font-semibold hover:text-blue-700 flex items-center">
+                                        View All Services
+                                        <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                                        </svg>
+                                    </a>
+                                    <a href="#" class="text-blue-600 font-semibold hover:text-blue-700 flex items-center">
+                                        Read Our Blog
+                                        <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                                        </svg>
+                                    </a>
+                                    <a href="#contact" class="text-blue-600 font-semibold hover:text-blue-700 flex items-center">
+                                        Contact Us
+                                        <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                                        </svg>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="relative group">
+                        <button class="text-gray-700 hover:text-blue-600 flex items-center py-2">
+                            Technologies
+                            <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                            </svg>
+                        </button>
+                        <!-- Technologies Dropdown -->
+                        <div class="absolute left-0 mt-2 w-80 bg-white rounded-lg shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+                            <div class="p-6 grid grid-cols-2 gap-4">
+                                <a href="#" class="block p-3 hover:bg-blue-50 rounded-md">
+                                    <div class="font-semibold text-gray-900 mb-1">React</div>
+                                    <div class="text-sm text-gray-600">Frontend framework</div>
+                                </a>
+                                <a href="#" class="block p-3 hover:bg-blue-50 rounded-md">
+                                    <div class="font-semibold text-gray-900 mb-1">Node.js</div>
+                                    <div class="text-sm text-gray-600">Backend platform</div>
+                                </a>
+                                <a href="#" class="block p-3 hover:bg-blue-50 rounded-md">
+                                    <div class="font-semibold text-gray-900 mb-1">Flutter</div>
+                                    <div class="text-sm text-gray-600">Mobile framework</div>
+                                </a>
+                                <a href="#" class="block p-3 hover:bg-blue-50 rounded-md">
+                                    <div class="font-semibold text-gray-900 mb-1">Python</div>
+                                    <div class="text-sm text-gray-600">AI & ML solutions</div>
+                                </a>
+                                <a href="#" class="block p-3 hover:bg-blue-50 rounded-md">
+                                    <div class="font-semibold text-gray-900 mb-1">AWS</div>
+                                    <div class="text-sm text-gray-600">Cloud hosting</div>
+                                </a>
+                                <a href="#" class="block p-3 hover:bg-blue-50 rounded-md">
+                                    <div class="font-semibold text-gray-900 mb-1">Azure</div>
+                                    <div class="text-sm text-gray-600">Microsoft cloud</div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="#" class="text-gray-700 hover:text-blue-600">Case Studies</a>
+                    <a href="#" class="text-gray-700 hover:text-blue-600">Resources</a>
+                    <div class="relative group">
+                        <button class="text-gray-700 hover:text-blue-600 flex items-center py-2">
+                            About Us
+                            <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                            </svg>
+                        </button>
+                        <!-- About Us Dropdown -->
+                        <div class="absolute left-0 mt-2 w-64 bg-white rounded-lg shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+                            <div class="p-4">
+                                <a href="#" class="block p-3 hover:bg-blue-50 rounded-md">
+                                    <div class="font-semibold text-gray-900">Our Story</div>
+                                    <div class="text-sm text-gray-600">Learn about us</div>
+                                </a>
+                                <a href="#" class="block p-3 hover:bg-blue-50 rounded-md">
+                                    <div class="font-semibold text-gray-900">Team</div>
+                                    <div class="text-sm text-gray-600">Meet our experts</div>
+                                </a>
+                                <a href="#" class="block p-3 hover:bg-blue-50 rounded-md">
+                                    <div class="font-semibold text-gray-900">Awards</div>
+                                    <div class="text-sm text-gray-600">Our recognitions</div>
+                                </a>
+                                <a href="#" class="block p-3 hover:bg-blue-50 rounded-md">
+                                    <div class="font-semibold text-gray-900">Testimonials</div>
+                                    <div class="text-sm text-gray-600">Client feedback</div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="#" class="text-gray-700 hover:text-blue-600">Careers</a>
+                    <a href="#contact" class="bg-blue-600 text-white px-6 py-2 rounded-md hover:bg-blue-700">Contact Us</a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-btn" class="md:hidden text-gray-700">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                    </svg>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-200">
+            <div class="px-4 py-3 space-y-3">
+                <!-- Services Mobile Dropdown -->
+                <div>
+                    <button id="mobile-services-btn" class="flex justify-between items-center w-full text-left text-gray-700 hover:text-blue-600 py-2">
+                        <span>Services</span>
+                        <svg class="w-4 h-4 transition-transform" id="mobile-services-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                        </svg>
+                    </button>
+                    <div id="mobile-services-dropdown" class="hidden pl-4 space-y-2 mt-2">
+                        <a href="#" class="block text-sm text-gray-600 hover:text-blue-600 py-1">Web Development</a>
+                        <a href="#" class="block text-sm text-gray-600 hover:text-blue-600 py-1">Mobile Apps</a>
+                        <a href="#" class="block text-sm text-gray-600 hover:text-blue-600 py-1">UI/UX Design</a>
+                        <a href="#" class="block text-sm text-gray-600 hover:text-blue-600 py-1">Cloud Solutions</a>
+                        <a href="#" class="block text-sm text-gray-600 hover:text-blue-600 py-1">QA & Testing</a>
+                        <a href="#" class="block text-sm text-gray-600 hover:text-blue-600 py-1">Consulting</a>
+                    </div>
+                </div>
+
+                <!-- Technologies Mobile Dropdown -->
+                <div>
+                    <button id="mobile-tech-btn" class="flex justify-between items-center w-full text-left text-gray-700 hover:text-blue-600 py-2">
+                        <span>Technologies</span>
+                        <svg class="w-4 h-4 transition-transform" id="mobile-tech-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                        </svg>
+                    </button>
+                    <div id="mobile-tech-dropdown" class="hidden pl-4 space-y-2 mt-2">
+                        <a href="#" class="block text-sm text-gray-600 hover:text-blue-600 py-1">React</a>
+                        <a href="#" class="block text-sm text-gray-600 hover:text-blue-600 py-1">Node.js</a>
+                        <a href="#" class="block text-sm text-gray-600 hover:text-blue-600 py-1">Flutter</a>
+                        <a href="#" class="block text-sm text-gray-600 hover:text-blue-600 py-1">Python</a>
+                        <a href="#" class="block text-sm text-gray-600 hover:text-blue-600 py-1">AWS</a>
+                        <a href="#" class="block text-sm text-gray-600 hover:text-blue-600 py-1">Azure</a>
+                    </div>
+                </div>
+
+                <a href="#" class="block text-gray-700 hover:text-blue-600 py-2">Case Studies</a>
+                <a href="#" class="block text-gray-700 hover:text-blue-600 py-2">Resources</a>
+
+                <!-- About Us Mobile Dropdown -->
+                <div>
+                    <button id="mobile-about-btn" class="flex justify-between items-center w-full text-left text-gray-700 hover:text-blue-600 py-2">
+                        <span>About Us</span>
+                        <svg class="w-4 h-4 transition-transform" id="mobile-about-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                        </svg>
+                    </button>
+                    <div id="mobile-about-dropdown" class="hidden pl-4 space-y-2 mt-2">
+                        <a href="#" class="block text-sm text-gray-600 hover:text-blue-600 py-1">Our Story</a>
+                        <a href="#" class="block text-sm text-gray-600 hover:text-blue-600 py-1">Team</a>
+                        <a href="#" class="block text-sm text-gray-600 hover:text-blue-600 py-1">Awards</a>
+                        <a href="#" class="block text-sm text-gray-600 hover:text-blue-600 py-1">Testimonials</a>
+                    </div>
+                </div>
+
+                <a href="#" class="block text-gray-700 hover:text-blue-600 py-2">Careers</a>
+                <a href="#contact" class="block bg-blue-600 text-white px-6 py-2 rounded-md text-center hover:bg-blue-700 mt-4">Contact Us</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="bg-gradient-to-br from-blue-50 to-white py-16 md:py-24">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div>
+                    <p class="text-blue-600 text-sm font-semibold mb-4">SOFTWARE DEVELOPMENT COMPANY</p>
+                    <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-6">
+                        Delivering bespoke software solutions across industries.
+                    </h1>
+                    <p class="text-gray-600 text-lg mb-8">
+                        We create innovative and effective solutions that drive results for our clients with cutting-edge technology.
+                    </p>
+                    <button class="bg-blue-600 text-white px-8 py-3 rounded-md hover:bg-blue-700 font-semibold">
+                        Get Started
+                    </button>
+                </div>
+                <div class="bg-white p-8 rounded-lg shadow-lg">
+                    <h3 class="text-xl font-bold text-gray-900 mb-6">Talk to Our Experts</h3>
+                    <form id="contact-form" class="space-y-4">
+                        <input type="text" name="firstName" placeholder="First Name *" required class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-600 focus:border-transparent">
+                        <input type="text" name="lastName" placeholder="Last Name *" required class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-600 focus:border-transparent">
+                        <input type="email" name="email" placeholder="Email *" required class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-600 focus:border-transparent">
+                        <input type="tel" name="phone" placeholder="Phone *" required class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-600 focus:border-transparent">
+                        <textarea name="message" placeholder="Message *" rows="4" required class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-600 focus:border-transparent"></textarea>
+                        <button type="submit" class="w-full bg-blue-600 text-white px-6 py-3 rounded-md hover:bg-blue-700 font-semibold">
+                            Submit
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Grid -->
+    <section class="py-16 md:py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-gray-50 p-6 rounded-lg">
+                    <div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4">
+                        <svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-2">Development Excellence</h3>
+                    <p class="text-gray-600">Transform your ideas into powerful software solutions with our expert development team.</p>
+                </div>
+                <div class="bg-gray-50 p-6 rounded-lg">
+                    <div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4">
+                        <svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-2">Fast Deployment</h3>
+                    <p class="text-gray-600">Get your products to market quickly with our agile development methodology.</p>
+                </div>
+                <div class="bg-gray-50 p-6 rounded-lg">
+                    <div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4">
+                        <svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-2">Quality Assured</h3>
+                    <p class="text-gray-600">Rigorous testing and quality assurance for reliable, bug-free applications.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Custom Development Section -->
+    <section class="py-16 md:py-24 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">From Custom Development</h2>
+            <h3 class="text-2xl md:text-3xl font-bold text-gray-900 mb-12">to Software Testing.</h3>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-white p-6 rounded-lg shadow-sm">
+                    <h4 class="text-lg font-bold text-gray-900 mb-3">Web Apps</h4>
+                    <p class="text-gray-600 mb-4">Build responsive and scalable web applications tailored to your business needs.</p>
+                    <a href="#" class="text-blue-600 font-semibold hover:text-blue-700">Learn More →</a>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-sm">
+                    <h4 class="text-lg font-bold text-gray-900 mb-3">Mobile Apps</h4>
+                    <p class="text-gray-600 mb-4">Create engaging mobile experiences for iOS and Android platforms.</p>
+                    <a href="#" class="text-blue-600 font-semibold hover:text-blue-700">Learn More →</a>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-sm">
+                    <h4 class="text-lg font-bold text-gray-900 mb-3">Cloud Solutions</h4>
+                    <p class="text-gray-600 mb-4">Leverage cloud technology for scalable and secure infrastructure.</p>
+                    <a href="#" class="text-blue-600 font-semibold hover:text-blue-700">Learn More →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Business Websites Section -->
+    <section class="py-16 md:py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-12">From Business Websites<br>to ERP Software.</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="bg-gray-50 p-6 rounded-lg">
+                    <h4 class="text-lg font-bold text-gray-900 mb-3">Enterprise Solutions</h4>
+                    <p class="text-gray-600">Comprehensive ERP and CRM systems designed for enterprise efficiency.</p>
+                </div>
+                <div class="bg-gray-50 p-6 rounded-lg">
+                    <h4 class="text-lg font-bold text-gray-900 mb-3">E-Commerce Platforms</h4>
+                    <p class="text-gray-600">Build powerful online stores with seamless payment integration.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Technology Section -->
+    <section class="py-16 md:py-24 bg-gray-900 text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl md:text-4xl font-bold mb-12">From Information Technology<br>to Education.</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div>
+                    <h4 class="text-lg font-bold mb-3">HealthTech</h4>
+                    <p class="text-gray-300">Innovative healthcare solutions for better patient outcomes.</p>
+                </div>
+                <div>
+                    <h4 class="text-lg font-bold mb-3">FinTech</h4>
+                    <p class="text-gray-300">Secure and scalable financial technology platforms.</p>
+                </div>
+                <div>
+                    <h4 class="text-lg font-bold mb-3">EdTech</h4>
+                    <p class="text-gray-300">Transform learning with cutting-edge educational technology.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Technologies Grid -->
+    <section class="py-16 md:py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-12">From PHP to Node. js</h2>
+            <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-6">
+                <div class="bg-gray-50 p-6 rounded-lg text-center">
+                    <div class="text-3xl mb-2">⚛️</div>
+                    <p class="font-semibold text-gray-900">React</p>
+                </div>
+                <div class="bg-gray-50 p-6 rounded-lg text-center">
+                    <div class="text-3xl mb-2">📱</div>
+                    <p class="font-semibold text-gray-900">Flutter</p>
+                </div>
+                <div class="bg-gray-50 p-6 rounded-lg text-center">
+                    <div class="text-3xl mb-2">🟢</div>
+                    <p class="font-semibold text-gray-900">Node.js</p>
+                </div>
+                <div class="bg-gray-50 p-6 rounded-lg text-center">
+                    <div class="text-3xl mb-2">🐍</div>
+                    <p class="font-semibold text-gray-900">Python</p>
+                </div>
+                <div class="bg-gray-50 p-6 rounded-lg text-center">
+                    <div class="text-3xl mb-2">☁️</div>
+                    <p class="font-semibold text-gray-900">AWS</p>
+                </div>
+                <div class="bg-gray-50 p-6 rounded-lg text-center">
+                    <div class="text-3xl mb-2">🔷</div>
+                    <p class="font-semibold text-gray-900">Azure</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Case Studies -->
+    <section class="py-16 md:py-24 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-12">Case Studies</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="bg-white p-8 rounded-lg shadow-sm">
+                    <h3 class="text-xl font-bold text-gray-900 mb-4">Streamlined Operations</h3>
+                    <p class="text-gray-600 mb-6">How we helped a logistics company reduce delivery time by 40%.</p>
+                    <div class="flex items-center space-x-4 text-sm text-gray-500 mb-4">
+                        <span class="bg-blue-100 text-blue-600 px-3 py-1 rounded-full">30% Cost Reduction</span>
+                        <span class="bg-green-100 text-green-600 px-3 py-1 rounded-full">40% Time Saved</span>
+                    </div>
+                    <a href="#" class="text-blue-600 font-semibold hover:text-blue-700">Read Case Study →</a>
+                </div>
+                <div class="bg-white p-8 rounded-lg shadow-sm">
+                    <h3 class="text-xl font-bold text-gray-900 mb-4">Digital Transformation</h3>
+                    <p class="text-gray-600 mb-6">Modernizing legacy systems for a healthcare provider.</p>
+                    <div class="flex items-center space-x-4 text-sm text-gray-500 mb-4">
+                        <span class="bg-purple-100 text-purple-600 px-3 py-1 rounded-full">2x Performance</span>
+                        <span class="bg-orange-100 text-orange-600 px-3 py-1 rounded-full">99.9% Uptime</span>
+                    </div>
+                    <a href="#" class="text-blue-600 font-semibold hover:text-blue-700">Read Case Study →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="py-16 md:py-24 bg-blue-600 text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Small Yet Mighty.</h2>
+                <h3 class="text-2xl md:text-3xl font-bold">And Satisfied.</h3>
+            </div>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+                <div>
+                    <div class="text-4xl md:text-5xl font-bold mb-2">100+</div>
+                    <p class="text-blue-100">Projects Delivered</p>
+                </div>
+                <div>
+                    <div class="text-4xl md:text-5xl font-bold mb-2">50+</div>
+                    <p class="text-blue-100">Happy Clients</p>
+                </div>
+                <div>
+                    <div class="text-4xl md:text-5xl font-bold mb-2">9+</div>
+                    <p class="text-blue-100">Years Experience</p>
+                </div>
+                <div>
+                    <div class="text-4xl md:text-5xl font-bold mb-2">95%</div>
+                    <p class="text-blue-100">Client Satisfaction</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="py-16 md:py-24 bg-white">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-12">Frequently Asked Questions</h2>
+            <div class="space-y-6">
+                <div class="border-b border-gray-200 pb-6">
+                    <button class="flex justify-between items-center w-full text-left">
+                        <h3 class="text-lg font-bold text-gray-900">What services does TrackNinja offer?</h3>
+                        <svg class="w-6 h-6 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                        </svg>
+                    </button>
+                </div>
+                <div class="border-b border-gray-200 pb-6">
+                    <button class="flex justify-between items-center w-full text-left">
+                        <h3 class="text-lg font-bold text-gray-900">How long does a typical project take?</h3>
+                        <svg class="w-6 h-6 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                        </svg>
+                    </button>
+                </div>
+                <div class="border-b border-gray-200 pb-6">
+                    <button class="flex justify-between items-center w-full text-left">
+                        <h3 class="text-lg font-bold text-gray-900">Do you provide ongoing support?</h3>
+                        <svg class="w-6 h-6 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-16 md:py-24 bg-blue-600 text-white">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl md:text-4xl font-bold mb-6">Schedule a free consultation call with one of our experts.</h2>
+            <button class="bg-white text-blue-600 px-8 py-3 rounded-md hover:bg-gray-100 font-semibold">
+                Contact Us
+            </button>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4">TRACKNINJA</h3>
+                    <p class="text-gray-400">Delivering innovative software solutions across industries.</p>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-4">Services</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="#" class="hover:text-white">Web Development</a></li>
+                        <li><a href="#" class="hover:text-white">Mobile Apps</a></li>
+                        <li><a href="#" class="hover:text-white">Cloud Solutions</a></li>
+                        <li><a href="#" class="hover:text-white">Consulting</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-4">Company</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="#" class="hover:text-white">About Us</a></li>
+                        <li><a href="#" class="hover:text-white">Case Studies</a></li>
+                        <li><a href="#" class="hover:text-white">Careers</a></li>
+                        <li><a href="#" class="hover:text-white">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-4">Contact</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li>+1 (844) 766-2754</li>
+                        <li>info@trackninja.com</li>
+                        <li>Austin, TX 78759</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 pt-8 text-center text-gray-400">
+                <p>© 2025 TrackNinja Pvt Ltd. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Mobile dropdown toggles
+        function setupMobileDropdown(btnId, dropdownId, iconId) {
+            const btn = document.getElementById(btnId);
+            const dropdown = document.getElementById(dropdownId);
+            const icon = document.getElementById(iconId);
+            
+            btn.addEventListener('click', () => {
+                dropdown.classList.toggle('hidden');
+                icon.style.transform = dropdown.classList.contains('hidden') ? 'rotate(0deg)' : 'rotate(180deg)';
+            });
+        }
+
+        setupMobileDropdown('mobile-services-btn', 'mobile-services-dropdown', 'mobile-services-icon');
+        setupMobileDropdown('mobile-tech-btn', 'mobile-tech-dropdown', 'mobile-tech-icon');
+        setupMobileDropdown('mobile-about-btn', 'mobile-about-dropdown', 'mobile-about-icon');
+    </script>
+</body>
+</html>
