@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Development Services - TrackNinja</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+        body { 
+            font-family: 'Inter', sans-serif;
+            overflow-x: hidden;
+        }
+        
+        @keyframes gradient {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+        
+        .gradient-animate {
+            background: linear-gradient(-45deg, #0066ff, #00ccff, #0099ff, #0066cc);
+            background-size: 400% 400%;
+            animation: gradient 15s ease infinite;
+        }
+        
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+        }
+        
+        .float-animate {
+            animation: float 6s ease-in-out infinite;
+        }
+        
+        .glow {
+            box-shadow: 0 0 30px rgba(0, 102, 255, 0.4);
+        }
+        
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        .grid-bg {
+            background-image: 
+                linear-gradient(rgba(0, 102, 255, 0.03) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(0, 102, 255, 0.03) 1px, transparent 1px);
+            background-size: 50px 50px;
+        }
+        
+        .gradient-text {
+            background: linear-gradient(135deg, #0066ff 0%, #00ccff 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        @keyframes slideIn {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .slide-in {
+            animation: slideIn 0.6s ease-out forwards;
+        }
+    </style>
+</head>
+<body class="bg-black text-white">
+    <!-- Navigation -->
+    <nav class="bg-black/80 backdrop-blur-lg border-b border-gray-800 sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <div class="flex items-center">
+                    <a href="index.html" class="text-2xl font-black gradient-text">TRACKNINJA</a>
+                </div>
+                
+                <div class="hidden md:flex space-x-8 items-center">
+                    <a href="index.html" class="text-gray-300 hover:text-white transition-colors">Home</a>
+                    <a href="index.html#services" class="text-gray-300 hover:text-white transition-colors">Services</a>
+                    <a href="index.html#technologies" class="text-gray-300 hover:text-white transition-colors">Technologies</a>
+                    <a href="index.html#case-studies" class="text-gray-300 hover:text-white transition-colors">Case Studies</a>
+                    <a href="#contact" class="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 glow transition-all">Contact Us</a>
+                </div>
+
+                <button id="mobile-menu-btn" class="md:hidden text-gray-300">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                    </svg>
+                </button>
+            </div>
+        </div>
+
+        <div id="mobile-menu" class="hidden md:hidden bg-gray-900 border-t border-gray-800">
+            <div class="px-4 py-3 space-y-3">
+                <a href="index.html" class="block text-gray-300 hover:text-white py-2">Home</a>
+                <a href="index.html#services" class="block text-gray-300 hover:text-white py-2">Services</a>
+                <a href="index.html#technologies" class="block text-gray-300 hover:text-white py-2">Technologies</a>
+                <a href="index.html#case-studies" class="block text-gray-300 hover:text-white py-2">Case Studies</a>
+                <a href="#contact" class="block bg-blue-600 text-white px-6 py-2 rounded-lg text-center hover:bg-blue-700 mt-4 glow">Contact Us</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="relative min-h-[60vh] flex items-center overflow-hidden grid-bg">
+        <div class="absolute inset-0 z-0">
+            <svg class="w-full h-full opacity-20" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                    <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%">
+                        <stop offset="0%" style="stop-color:#0066ff;stop-opacity:0.3" />
+                        <stop offset="100%" style="stop-color:#00ccff;stop-opacity:0.3" />
+                    </linearGradient>
+                </defs>
+                <circle cx="10%" cy="20%" r="150" fill="url(#grad1)" class="float-animate" />
+                <circle cx="90%" cy="80%" r="200" fill="url(#grad1)" style="animation-delay: 2s;" class="float-animate" />
+            </svg>
+        </div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 relative z-10">
+            <div class="text-center slide-in">
+                <div class="inline-block mb-6">
+                    <span class="text-blue-400 text-sm font-bold tracking-wider uppercase px-4 py-2 rounded-full border border-blue-500/30 bg-blue-500/10">
+                        Web Development Services
+                    </span>
+                </div>
+
+                <h1 class="text-5xl md:text-6xl lg:text-7xl font-black mb-6 leading-tight">
+                    Build <span class="gradient-text">Modern</span> Web Applications
+                </h1>
+
+                <p class="text-gray-400 text-lg md:text-xl mb-8 leading-relaxed max-w-3xl mx-auto">
+                    From responsive websites to complex web applications, we create scalable, secure, and high-performance solutions using cutting-edge frameworks and cloud-native architecture.
+                </p>
+
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <a href="#contact" class="bg-blue-600 text-white px-8 py-4 rounded-lg hover:bg-blue-700 glow transition-all font-semibold text-center">
+                        Start Your Project
+                    </a>
+                    <a href="#technologies" class="border border-gray-700 text-white px-8 py-4 rounded-lg hover:border-blue-500 hover:bg-blue-500/10 transition-all font-semibold text-center">
+                        View Technologies
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- What We Offer -->
+    <section class="py-24 bg-gradient-to-b from-black to-gray-900">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-black mb-4">What We <span class="gradient-text">Deliver</span></h2>
+                <p class="text-gray-400 text-lg max-w-2xl mx-auto">Comprehensive web development solutions tailored to your business needs</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Single Page Applications -->
+                <div class="bg-gray-900/50 border border-gray-800 p-8 rounded-2xl hover:border-blue-500/50 transition-all group">
+                    <div class="w-16 h-16 bg-blue-600/20 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                        <svg class="w-8 h-8 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">Single Page Applications</h3>
+                    <p class="text-gray-400">Fast, interactive SPAs built with React, Vue, or Angular for seamless user experiences.</p>
+                </div>
+
+                <!-- Progressive Web Apps -->
+                <div class="bg-gray-900/50 border border-gray-800 p-8 rounded-2xl hover:border-blue-500/50 transition-all group">
+                    <div class="w-16 h-16 bg-blue-600/20 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                        <svg class="w-8 h-8 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">Progressive Web Apps</h3>
+                    <p class="text-gray-400">App-like experiences that work offline and can be installed on any device.</p>
+                </div>
+
+                <!-- E-Commerce Platforms -->
+                <div class="bg-gray-900/50 border border-gray-800 p-8 rounded-2xl hover:border-blue-500/50 transition-all group">
+                    <div class="w-16 h-16 bg-blue-600/20 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                        <svg class="w-8 h-8 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">E-Commerce Platforms</h3>
+                    <p class="text-gray-400">Secure online stores with payment integration, inventory management, and analytics.</p>
+                </div>
+
+                <!-- Custom Web Portals -->
+                <div class="bg-gray-900/50 border border-gray-800 p-8 rounded-2xl hover:border-blue-500/50 transition-all group">
+                    <div class="w-16 h-16 bg-blue-600/20 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                        <svg class="w-8 h-8 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">Custom Web Portals</h3>
+                    <p class="text-gray-400">Enterprise portals, dashboards, and admin panels with role-based access control.</p>
+                </div>
+
+                <!-- API Development -->
+                <div class="bg-gray-900/50 border border-gray-800 p-8 rounded-2xl hover:border-blue-500/50 transition-all group">
+                    <div class="w-16 h-16 bg-blue-600/20 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                        <svg class="w-8 h-8 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 9l3 3-3 3m5 0h3M5 20h14a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">API Development</h3>
+                    <p class="text-gray-400">RESTful and GraphQL APIs for seamless integration with third-party services.</p>
+                </div>
+
+                <!-- Cloud Deployment -->
+                <div class="bg-gray-900/50 border border-gray-800 p-8 rounded-2xl hover:border-blue-500/50 transition-all group">
+                    <div class="w-16 h-16 bg-blue-600/20 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                        <svg class="w-8 h-8 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">Cloud Deployment</h3>
+                    <p class="text-gray-400">Scalable hosting on AWS, Azure, or GCP with CI/CD pipelines and auto-scaling.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Technologies -->
+    <section id="technologies" class="py-24 bg-black relative overflow-hidden">
+        <div class="absolute inset-0 grid-bg opacity-50"></div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-black mb-4">Our <span class="gradient-text">Tech Stack</span></h2>
+                <p class="text-gray-400 text-lg max-w-2xl mx-auto">Cutting-edge technologies powering modern web development</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+                <!-- Frontend -->
+                <div class="bg-gray-900/50 border border-gray-800 p-8 rounded-2xl">
+                    <h3 class="text-2xl font-bold mb-6 gradient-text">Frontend</h3>
+                    <div class="space-y-4">
+                        <div class="flex items-center gap-3">
+                            <div class="w-12 h-12 bg-blue-600/20 rounded-lg flex items-center justify-center text-2xl">⚛️</div>
+                            <div>
+                                <p class="font-bold">React.js</p>
+                                <p class="text-sm text-gray-500">Component-based UI</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <div class="w-12 h-12 bg-blue-600/20 rounded-lg flex items-center justify-center text-2xl">🅰️</div>
+                            <div>
+                                <p class="font-bold">Angular</p>
+                                <p class="text-sm text-gray-500">Enterprise applications</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <div class="w-12 h-12 bg-blue-600/20 rounded-lg flex items-center justify-center text-2xl">💚</div>
+                            <div>
+                                <p class="font-bold">Vue.js</p>
+                                <p class="text-sm text-gray-500">Progressive framework</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <div class="w-12 h-12 bg-blue-600/20 rounded-lg flex items-center justify-center text-2xl">🎨</div>
+                            <div>
+                                <p class="font-bold">Tailwind CSS</p>
+                                <p class="text-sm text-gray-500">Utility-first styling</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Backend -->
+                <div class="bg-gray-900/50 border border-gray-800 p-8 rounded-2xl">
+                    <h3 class="text-2xl font-bold mb-6 gradient-text">Backend</h3>
+                    <div class="space-y-4">
+                        <div class="flex items-center gap-3">
+                            <div class="w-12 h-12 bg-green-600/20 rounded-lg flex items-center justify-center text-2xl">☊</div>
+                            <div>
+                                <p class="font-bold">Node.js</p>
+                                <p class="text-sm text-gray-500">JavaScript runtime</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <div class="w-12 h-12 bg-green-600/20 rounded-lg flex items-center justify-center text-2xl">🐍</div>
+                            <div>
+                                <p class="font-bold">Python/Django</p>
+                                <p class="text-sm text-gray-500">Rapid development</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <div class="w-12 h-12 bg-green-600/20 rounded-lg flex items-center justify-center text-2xl">💎</div>
+                            <div>
+                                <p class="font-bold">Ruby on Rails</p>
+                                <p class="text-sm text-gray-500">Convention over config</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <div class="w-12 h-12 bg-green-600/20 rounded-lg flex items-center justify-center text-2xl">🐘</div>
+                            <div>
+                                <p class="font-bold">PHP/Laravel</p>
+                                <p class="text-sm text-gray-500">Elegant syntax</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Cloud & DevOps -->
+                <div class="bg-gray-900/50 border border-gray-800 p-8 rounded-2xl">
+                    <h3 class="text-2xl font-bold mb-6 gradient-text">Cloud & DevOps</h3>
+                    <div class="space-y-4">
+                        <div class="flex items-center gap-3">
+                            <div class="w-12 h-12 bg-orange-600/20 rounded-lg flex items-center justify-center text-2xl">☁️</div>
+                            <div>
+                                <p class="font-bold">AWS</p>
+                                <p class="text-sm text-gray-500">EC2, S3, Lambda</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <div class="w-12 h-12 bg-orange-600/20 rounded-lg flex items-center justify-center text-2xl">🔷</div>
+                            <div>
+                                <p class="font-bold">Azure</p>
+                                <p class="text-sm text-gray-500">Enterprise cloud</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <div class="w-12 h-12 bg-orange-600/20 rounded-lg flex items-center justify-center text-2xl">🐳</div>
+                            <div>
+                                <p class="font-bold">Docker</p>
+                                <p class="text-sm text-gray-500">Containerization</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <div class="w-12 h-12 bg-orange-600/20 rounded-lg flex items-center justify-center text-2xl">⚙️</div>
+                            <div>
+                                <p class="font-bold">Kubernetes</p>
+                                <p class="text-sm text-gray-500">Orchestration</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Process -->
+    <section class="py-24 bg-gradient-to-b from-gray-900 to-black">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-black mb-4">Our <span class="gradient-text">Development Process</span></h2>
+                <p class="text-gray-400 text-lg max-w-2xl mx-auto">A proven methodology for delivering exceptional web applications</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="text-center">
+                    <div class="w-20 h-20 bg-blue-600/20 rounded-full flex items-center justify-center mx-auto mb-6 border-4 border-blue-500">
+                        <span class="text-3xl font-black gradient-text">1</span>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Discovery & Planning</h3>
+                    <p class="text-gray-400">Understanding your requirements and creating a detailed project roadmap.</p>
+                </div>
+
+                <div class="text-center">
+                    <div class="w-20 h-20 bg-blue-600/20 rounded-full flex items-center justify-center mx-auto mb-6 border-4 border-blue-500">
+                        <span class="text-3xl font-black gradient-text">2</span>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Design & Prototyping</h3>
+                    <p class="text-gray-400">Creating wireframes, mockups, and interactive prototypes for approval.</p>
+                </div>
+
+                <div class="text-center">
+                    <div class="w-20 h-20 bg-blue-600/20 rounded-full flex items-center justify-center mx-auto mb-6 border-4 border-blue-500">
+                        <span class="text-3xl font-black gradient-text">3</span>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Development & Testing</h3>
+                    <p class="text-gray-400">Agile development with continuous integration and rigorous testing.</p>
+                </div>
+
+                <div class="text-center">
+                    <div class="w-20 h-20 bg-blue-600/20 rounded-full flex items-center justify-center mx-auto mb-6 border-4 border-blue-500">
+                        <span class="text-3xl font-black gradient-text">4</span>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Launch & Support</h3>
+                    <p class="text-gray-400">Deployment to production with ongoing maintenance and optimization.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us -->
+    <section class="py-24 bg-black">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-black mb-4">Why Choose <span class="gradient-text">TrackNinja</span></h2>
+                <p class="text-gray-400 text-lg max-w-2xl mx-auto">We deliver web solutions that drive real business results</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="bg-gray-900/30 border border-gray-800 p-8 rounded-2xl">
+                    <div class="flex items-start gap-4">
+                        <div class="text-blue-400 text-3xl">⚡</div>
+                        <div>
+                            <h3 class="text-2xl font-bold mb-3">Lightning Fast Performance</h3>
+                            <p class="text-gray-400 leading-relaxed">Optimized for speed with lazy loading, code splitting, and CDN integration for sub-second load times.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-gray-900/30 border border-gray-800 p-8 rounded-2xl">
+                    <div class="flex items-start gap-4">
+                        <div class="text-blue-400 text-3xl">🔒</div>
+                        <div>
+                            <h3 class="text-2xl font-bold mb-3">Enterprise-Grade Security</h3>
+                            <p class="text-gray-400 leading-relaxed">OWASP best practices, encryption, authentication, and regular security audits to protect your data.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-gray-900/30 border border-gray-800 p-8 rounded-2xl">
+                    <div class="flex items-start gap-4">
+                        <div class="text-blue-400 text-3xl">📱</div>
+                        <div>
+                            <h3 class="text-2xl font-bold mb-3">Mobile-First Responsive</h3>
+                            <p class="text-gray-400 leading-relaxed">Beautiful, consistent experience across all devices from mobile phones to 4K displays.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-gray-900/30 border border-gray-800 p-8 rounded-2xl">
+                    <div class="flex items-start gap-4">
+                        <div class="text-blue-400 text-3xl">📈</div>
+                        <div>
+                            <h3 class="text-2xl font-bold mb-3">Scalable Architecture</h3>
+                            <p class="text-gray-400 leading-relaxed">Built to grow with your business, from hundreds to millions of users without breaking a sweat.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-gray-900/30 border border-gray-800 p-8 rounded-2xl">
+                    <div class="flex items-start gap-4">
+                        <div class="text-blue-400 text-3xl">🎯</div>
+                        <div>
+                            <h3 class="text-2xl font-bold mb-3">SEO Optimized</h3>
+                            <p class="text-gray-400 leading-relaxed">Server-side rendering, semantic HTML, and optimized meta tags for maximum search visibility.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-gray-900/30 border border-gray
